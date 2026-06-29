@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameDialog</class>
+ <widget class="QDialog" name="GameDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Game</string>
+  </property>
+  <layout class="QVBoxLayout" name="dialogRootLayout">
+   <property name="spacing">
+    <number>14</number>
+   </property>
+   <property name="leftMargin">
+    <number>24</number>
+   </property>
+   <property name="topMargin">
+    <number>24</number>
+   </property>
+   <property name="rightMargin">
+    <number>24</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="dialogTitleLabel">
+     <property name="text">
+      <string>Add New Game</string>
+     </property>
+     <property name="objectName" stdset="0">
+      <string notr="true">dialogTitleLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="coverAndFormLayout">
+     <item>
+      <layout class="QVBoxLayout" name="coverColumnLayout">
+       <item>
+        <widget class="QLabel" name="coverPreviewLabel">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>210</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>210</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>No Cover</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">coverPreviewLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="browseCoverBtn">
+         <property name="text">
+          <string>Choose Cover...</string>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">browseCoverBtn</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="verticalSpacing">
+        <number>10</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>12</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="titleFieldLabel">
+         <property name="text">
+          <string>Title *</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="titleEdit">
+         <property name="placeholderText">
+          <string>Game title</string>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">titleEdit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="developerFieldLabel">
+         <property name="text">
+          <string>Developer</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="developerEdit">
+         <property name="placeholderText">
+          <string>Studio name</string>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">developerEdit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="genreFieldLabel">
+         <property name="text">
+          <string>Genre</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="genreCombo">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">genreCombo</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RPG</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Adventure</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Strategy</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Shooter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Platformer</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Simulation</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sports</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Puzzle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Horror</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Other</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="platformFieldLabel">
+         <property name="text">
+          <string>Platform</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="platformCombo">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">platformCombo</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>PC</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PlayStation</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Xbox</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Nintendo Switch</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mobile</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="statusFieldLabel">
+         <property name="text">
+          <string>Status</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="statusCombo">
+         <property name="objectName" stdset="0">
+          <string notr="true">statusCombo</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Not Started</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Playing</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Completed</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>On Hold</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Dropped</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="releaseYearFieldLabel">
+         <property name="text">
+          <string>Release Year</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="releaseYearSpin">
+         <property name="minimum">
+          <number>1970</number>
+         </property>
+         <property name="maximum">
+          <number>2100</number>
+         </property>
+         <property name="value">
+          <number>2024</number>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">releaseYearSpin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="playtimeFieldLabel">
+         <property name="text">
+          <string>Playtime (hrs)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QDoubleSpinBox" name="playtimeSpin">
+         <property name="maximum">
+          <double>100000.000000000</double>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">playtimeSpin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="ratingFieldLabel">
+         <property name="text">
+          <string>Rating (1-10)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="ratingSpin">
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">ratingSpin</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="priceFieldLabel">
+         <property name="text">
+          <string>Price ($)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QDoubleSpinBox" name="priceSpin">
+         <property name="maximum">
+          <double>10000.000000000</double>
+         </property>
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="objectName" stdset="0">
+          <string notr="true">priceSpin</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="checkboxLayout">
+     <item>
+      <widget class="QCheckBox" name="favoriteCheck">
+       <property name="text">
+        <string>❤  Mark as Favorite</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">favoriteCheck</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="wishlistCheck">
+       <property name="text">
+        <string>⭐  Add to Wishlist</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">wishlistCheck</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="reviewFieldLabel">
+     <property name="text">
+      <string>Review / Notes</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="reviewEdit">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="placeholderText">
+      <string>Write your thoughts about this game...</string>
+     </property>
+     <property name="objectName" stdset="0">
+      <string notr="true">reviewEdit</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="dialogButtonsLayout">
+     <item>
+      <spacer name="dialogButtonsSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelBtn">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">cancelBtn</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveBtn">
+       <property name="text">
+        <string>Save Game</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">saveBtn</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

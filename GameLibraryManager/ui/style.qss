@@ -1,0 +1,387 @@
+/* =====================================================================
+   style.qss — Steam-inspired dark theme for Game Library Manager
+   Palette:
+     Background deep   : #171a21
+     Background panel   : #1b2838
+     Background card     : #2a3f5a
+     Accent (teal)        : #66c0f4
+     Accent hover           : #1999ff
+     Accent (success/owned) : #a4d007
+     Text primary             : #c7d5e0
+     Text secondary             : #8f98a0
+   ===================================================================== */
+
+QWidget {
+    background-color: #171a21;
+    color: #c7d5e0;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 13px;
+}
+
+QLabel {
+    background-color: transparent;
+}
+
+QMainWindow {
+    background-color: #171a21;
+}
+
+/* ---------------------------------------------------------------- */
+/* Sidebar                                                           */
+/* ---------------------------------------------------------------- */
+QFrame#sidebarFrame {
+    background-color: #0e141b;
+    border-right: 1px solid #2a3f5a;
+}
+
+QLabel#logoLabel {
+    color: #66c0f4;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-left: 4px;
+}
+
+QFrame#sidebarLine1, QFrame#sidebarLine2 {
+    background-color: #2a3f5a;
+    max-height: 1px;
+    border: none;
+}
+
+QPushButton {
+    background-color: #2a3f5a;
+    color: #c7d5e0;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+QPushButton:hover {
+    background-color: #3d5875;
+}
+
+QPushButton:pressed {
+    background-color: #1b2838;
+}
+
+QPushButton#navAllGamesBtn,
+QPushButton#navFavoritesBtn,
+QPushButton#navWishlistBtn,
+QPushButton#navStatsBtn {
+    background-color: transparent;
+    text-align: left;
+    padding-left: 14px;
+    border-radius: 6px;
+    color: #8f98a0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton#navAllGamesBtn:hover,
+QPushButton#navFavoritesBtn:hover,
+QPushButton#navWishlistBtn:hover,
+QPushButton#navStatsBtn:hover {
+    background-color: #1b2838;
+    color: #c7d5e0;
+}
+
+QPushButton#navAllGamesBtn:checked,
+QPushButton#navFavoritesBtn:checked,
+QPushButton#navWishlistBtn:checked,
+QPushButton#navStatsBtn:checked {
+    background-color: #1b2838;
+    color: #66c0f4;
+    border-left: 3px solid #66c0f4;
+}
+
+QPushButton#addGameBtn {
+    background-color: #66c0f4;
+    color: #0e141b;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+QPushButton#addGameBtn:hover {
+    background-color: #8ed0ff;
+}
+
+/* ---------------------------------------------------------------- */
+/* Content area                                                      */
+/* ---------------------------------------------------------------- */
+QFrame#contentFrame {
+    background-color: #171a21;
+}
+
+QLabel#pageTitleLabel {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox, QTextEdit {
+    background-color: #2a3f5a;
+    border: 1px solid #3d5875;
+    border-radius: 5px;
+    padding: 6px 10px;
+    color: #c7d5e0;
+    selection-background-color: #66c0f4;
+}
+
+QLineEdit:focus, QComboBox:focus, QTextEdit:focus {
+    border: 1px solid #66c0f4;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 22px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #2a3f5a;
+    color: #c7d5e0;
+    selection-background-color: #66c0f4;
+    selection-color: #0e141b;
+    border: 1px solid #3d5875;
+}
+
+/* ---------------------------------------------------------------- */
+/* Game cards                                                        */
+/* ---------------------------------------------------------------- */
+QFrame#gameCard {
+    background-color: #1b2838;
+    border-radius: 8px;
+    border: 1px solid #2a3f5a;
+}
+
+QFrame#gameCard:hover {
+    border: 1px solid #66c0f4;
+}
+
+QLabel#cardCoverLabel {
+    background-color: #2a3f5a;
+    border-radius: 6px;
+}
+
+QLabel#cardTitleLabel {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+QLabel#cardMetaLabel {
+    font-size: 11px;
+    color: #8f98a0;
+}
+
+QLabel#cardRatingLabel {
+    color: #a4d007;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+QLabel#cardStatusBadge {
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0e141b;
+}
+
+QPushButton#cardFavBtn, QPushButton#cardMenuBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 2px;
+}
+
+QPushButton#cardFavBtn:hover, QPushButton#cardMenuBtn:hover {
+    background-color: #2a3f5a;
+    border-radius: 4px;
+}
+
+QPushButton#cardEditBtn, QPushButton#cardDeleteBtn, QPushButton#cardAchBtn {
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background-color: #2a3f5a;
+}
+
+QPushButton#cardDeleteBtn:hover {
+    background-color: #c0392b;
+}
+
+QPushButton#cardEditBtn:hover, QPushButton#cardAchBtn:hover {
+    background-color: #66c0f4;
+    color: #0e141b;
+}
+
+/* ---------------------------------------------------------------- */
+/* Statistics cards                                                  */
+/* ---------------------------------------------------------------- */
+QFrame#statCard {
+    background-color: #1b2838;
+    border-radius: 8px;
+    border: 1px solid #2a3f5a;
+}
+
+QLabel#statValueLabel {
+    font-size: 26px;
+    font-weight: 800;
+    color: #66c0f4;
+}
+
+QLabel#statLabel {
+    font-size: 12px;
+    color: #8f98a0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+QFrame#genreBreakdownFrame {
+    background-color: #1b2838;
+    border-radius: 8px;
+    border: 1px solid #2a3f5a;
+}
+
+QLabel#genreBreakdownTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+QLabel#genreBarLabel {
+    font-size: 12px;
+    color: #c7d5e0;
+}
+
+QProgressBar {
+    background-color: #2a3f5a;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    height: 18px;
+}
+
+QProgressBar::chunk {
+    background-color: #66c0f4;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Scrollbars                                                        */
+/* ---------------------------------------------------------------- */
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+
+QScrollBar:vertical {
+    background: #171a21;
+    width: 10px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #3d5875;
+    border-radius: 5px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #66c0f4;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* Dialogs                                                           */
+/* ---------------------------------------------------------------- */
+QDialog {
+    background-color: #1b2838;
+}
+
+QLabel#dialogTitleLabel {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+QLabel#coverPreviewLabel {
+    background-color: #2a3f5a;
+    border-radius: 6px;
+    border: 1px solid #3d5875;
+    color: #8f98a0;
+}
+
+QCheckBox {
+    spacing: 8px;
+    color: #c7d5e0;
+    background-color: transparent;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #3d5875;
+    background: #2a3f5a;
+}
+
+QCheckBox::indicator:checked {
+    background: #66c0f4;
+    border: 1px solid #66c0f4;
+}
+
+QPushButton#saveBtn {
+    background-color: #66c0f4;
+    color: #0e141b;
+    font-weight: 700;
+    padding: 8px 22px;
+}
+
+QPushButton#saveBtn:hover {
+    background-color: #8ed0ff;
+}
+
+QPushButton#cancelBtn {
+    background-color: #2a3f5a;
+    padding: 8px 22px;
+}
+
+QListWidget {
+    background-color: #2a3f5a;
+    border: 1px solid #3d5875;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+QListWidget::item {
+    padding: 6px;
+    border-radius: 4px;
+}
+
+QListWidget::item:selected {
+    background-color: #66c0f4;
+    color: #0e141b;
+}
+
+QMessageBox {
+    background-color: #1b2838;
+}
+
+QStatusBar {
+    background-color: #0e141b;
+    color: #8f98a0;
+}
+
+QToolTip {
+    background-color: #2a3f5a;
+    color: #c7d5e0;
+    border: 1px solid #66c0f4;
+    padding: 4px;
+}

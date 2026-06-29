@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AchievementDialog</class>
+ <widget class="QDialog" name="AchievementDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Achievements</string>
+  </property>
+  <layout class="QVBoxLayout" name="achDialogRootLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>22</number>
+   </property>
+   <property name="topMargin">
+    <number>22</number>
+   </property>
+   <property name="rightMargin">
+    <number>22</number>
+   </property>
+   <property name="bottomMargin">
+    <number>18</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="achGameTitleLabel">
+     <property name="text">
+      <string>Achievements for Game</string>
+     </property>
+     <property name="objectName" stdset="0">
+      <string notr="true">achGameTitleLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="achProgressBar">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="objectName" stdset="0">
+      <string notr="true">achProgressBar</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="achListWidget">
+     <property name="objectName" stdset="0">
+      <string notr="true">achListWidget</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="achAddRowLayout">
+     <item>
+      <widget class="QLineEdit" name="newAchNameEdit">
+       <property name="placeholderText">
+        <string>New achievement name...</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">newAchNameEdit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addAchBtn">
+       <property name="text">
+        <string>＋ Add</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">addAchBtn</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="newAchDescEdit">
+     <property name="placeholderText">
+      <string>Description (optional)...</string>
+     </property>
+     <property name="objectName" stdset="0">
+      <string notr="true">newAchDescEdit</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="achButtonsLayout">
+     <item>
+      <widget class="QPushButton" name="removeAchBtn">
+       <property name="text">
+        <string>Remove Selected</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">removeAchBtn</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="achButtonsSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeAchBtn">
+       <property name="text">
+        <string>Close</string>
+       </property>
+       <property name="objectName" stdset="0">
+        <string notr="true">closeAchBtn</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
